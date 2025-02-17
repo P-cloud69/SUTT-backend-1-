@@ -32,13 +32,7 @@ for col in df.columns:
         "LUNCH": lunch,
         "DINNER": dinner
     }
-
-
-
 df_mess_menu = pd.DataFrame.from_dict(messmenu, orient="index")
-df_mess_menu = df_mess_menu.map(lambda x: None if isinstance(x, str) and "****" in x else x)
-
-df_mess_menu = df_mess_menu.dropna(how='all')
 
 df_mess_menu.to_json('messmenutask.json', orient='index', indent=4)
 jsonmenu = json.dumps(messmenu, indent=2)
