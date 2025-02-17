@@ -17,7 +17,6 @@ indices_3 = [24,25,26,27,28,29,30]
 for col in df.columns:
   
     date = str(dates[col])
-    unique_key = f"{col}_{date}" 
     breakfast = df.loc[indices_1, col].astype(str).tolist()
     lunch = df.loc[indices_2, col].astype(str).tolist()
     dinner = df.loc[indices_3, col].astype(str).tolist()
